@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: letsencrypt
+  name: letsencrypt
+  namespace: moreorless-site
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: letsencrypt:latest
+  resources: {}
+  source:
+    git:
+      ref: release
+      uri: git@github.com:ure/moreorless-site.git
+    contextDir: letsencrypt/
+    type: Git
+    sourceSecret:
+      name: moreorless-site
+  strategy:
+    dockerStrategy:
+      from:
+        kind: ImageStreamTag
+        name: letsencrypt-injector:latest
+        namespace: weepee-registry
+    type: Docker
+  triggers:
+  - github:
+      secret: f6ba8469-6c8c-46ef-9062-23be9a01dccc
+    type: GitHub
+  - type: ConfigChange

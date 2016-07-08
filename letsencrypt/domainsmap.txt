@@ -1,0 +1,5 @@
+# domain path name service target-port
+# test.weepee.io / test static 8080
+# ------------------------------------
+fleurop.be / fleurop proxy 8080-tcp
+www.fleurop.be / fleurop-www proxy 8080-tcp
