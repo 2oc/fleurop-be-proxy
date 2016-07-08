@@ -4,7 +4,6 @@ metadata:
   labels:
     app: letsencrypt
   name: letsencrypt
-  namespace: moreorless-site
 spec:
   ports:
   - name: 8080-tcp

@@ -4,5 +4,4 @@ metadata:
   labels:
     app: letsencrypt
   name: letsencrypt
-  namespace: moreorless-site
 spec: {}

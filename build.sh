@@ -20,3 +20,4 @@ oc create -f letsencrypt/buildconfig.yaml
 oc create -f letsencrypt/deploymentconfig.yaml
 oc create -f letsencrypt/services.yaml
 oc create -f letsencrypt/pvc.yaml
+oc create -f letsencrypt/route.yaml

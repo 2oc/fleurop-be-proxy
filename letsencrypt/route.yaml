@@ -20,7 +20,6 @@ items:
     labels:
       app: letsencrypt
     name: fleurop-www-le
-    namespace: fleurop-site
   spec:
     host: www.fleurop.be
     path: /.well-known/acme-challenge

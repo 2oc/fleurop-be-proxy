@@ -4,7 +4,6 @@ metadata:
   labels:
     app: letsencrypt
   name: letsencrypt
-  namespace: moreorless-site
 spec:
   output:
     to:
@@ -13,12 +12,10 @@ spec:
   resources: {}
   source:
     git:
-      ref: release
-      uri: git@github.com:ure/moreorless-site.git
+      ref: master
+      uri: https://github.com/weepee-org/fleurop-be-proxy.git
     contextDir: letsencrypt/
     type: Git
-    sourceSecret:
-      name: moreorless-site
   strategy:
     dockerStrategy:
       from:
